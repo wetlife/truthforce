@@ -1,0 +1,164 @@
+* {
+	font-family: "Special Elite";
+	font-size: calc(8px + 1vw);
+}
+
+body {
+	background: url("tileable_pale_wood_texture_by_ftourini_d3jkpsh.jpg") fixed;
+	min-height: 100% !important;
+	background-size: cover;
+	padding: 0;
+	margin: 0;
+}
+
+#paper {
+	background-color: tan;
+	background-image: url("clean-gray-paper.png");
+	box-shadow: 0 0 0 .1em rgba( 128, 129.5, 131, .4), .1em .05em rgba( 28, 29.5, 31, .4);
+	margin: .25em;
+	padding: .5em;
+	/*margin: .2em 1em;
+	padding: 1em;*/
+	width: calc(100%-2em);
+	color: rgba( 28, 29.5, 31, .55);
+	opacity: 0.95;/**/
+	/*mix-blend-mode: darken;*/
+	/* COLUMNS DEFINED BY THEIR WIDTH
+	column-width: 45em; */
+}
+
+#paper:first-child {
+	margin-top: .1em;
+}
+
+div.navigation:first-of-type {
+	position: sticky;
+	top: .5em;
+	text-align: end;
+	z-index: 1000;
+}
+
+div.navigation>img {/* color nav-buttons orange */
+	background-color: rgba(255,165,0,.8);
+	opacity: 1;
+}
+
+H1,H2,H3,H4,H5,H6 {
+	font-family: 'Special Elite';
+	text-align: center;
+	margin: .5ex auto;
+	padding: 0;
+	mix-blend-mode: color-burn;
+}
+
+H1 {
+	font-size: 2.2em;
+}
+
+H2 {
+	font-size: 2em;
+}
+
+H3 {
+	font-size: 1.8em;
+}
+
+H4 {
+	font-size: 1.6em;
+}
+
+H5 {
+	font-size: 1.4em;
+}
+
+H6 {
+	font-size: 1.2em;
+}
+
+ul.TofC {
+	max-width: max-content;
+	float: left;
+	margin: 0 .5em 0 0;
+	padding: 0 0 0 1em;
+	border: .1em dashed rgba(0, 0, 0, .2);
+	border-radius: 1em;
+}
+
+ul, ol {
+	margin: .1em 1em 0 0;
+	margin-left: 0;
+	padding-left: 2em;
+}
+
+ol ol, ol ul, ul ol, ul ul {
+	margin-left: .5em;
+	padding-left: .5em;
+}
+
+a[href]:link {
+	color: darkgreen;
+	text-shadow: 0 0 .1em rgba(255,165,0,.5);
+}
+
+a[href]:visited {
+	color: darkorchid;
+}
+
+a[href]:hover {
+	text-shadow: 0 0 .2em rgba(255,165,0,1);
+}
+
+a[href]:active {
+	color: hotpink;
+}
+
+img {
+	max-width: 90%;
+	height: auto;
+	mix-blend-mode: multiply;
+}
+
+#paper:last-child {
+	margin-bottom: 0;
+}
+
+/* THIS RULE REMOVES FORWARD- AND BACK-BUTTON-NAVIGATION */
+div.navigation{
+	display: none;
+}
+
+/* ###################################################### */
+/* ###################### @print ######################## */
+/* ###################################################### */
+@media print {
+	@page {
+		margin: 3cm;
+	}
+
+	body {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		font-size: calc(100vw/72);
+	}
+
+	* {
+		print-color-adjust: exact;/* =>print correctly */
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		page-break-after: avoid;
+		page-break-inside: avoid;
+	}
+
+	img {
+		page-break-inside: avoid;
+	}
+
+	a[href]:after {
+		font-style: Italic;
+		background: orange;
+		content: &quot; &lt; &quot; attr(href) &quot; &gt; &quot;;
+	}
+
+}
