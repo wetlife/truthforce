@@ -1,6 +1,7 @@
 * {
 	font-family: "Special Elite";
-	font-size: calc(8px + 1vw);
+    font-size: 16px;
+	font-size: calc(3vw);
 }
 
 body {
@@ -13,16 +14,19 @@ body {
 
 #paper {
 	background-color: tan;
-	background-image: url("clean-gray-paper.png");
+	background-image: url("exclusive-paper.png");
 	box-shadow: 0 0 0 .1em rgba( 128, 129.5, 131, .4), .1em .05em rgba( 28, 29.5, 31, .4);
 	margin: .25em;
 	padding: .5em;
-	/*margin: .2em 1em;
-	padding: 1em;*/
 	width: calc(100%-2em);
-	color: rgba( 28, 29.5, 31, .55);
+	color: rgba( 14, 14.75, 15.5, 0.55);
 	opacity: 0.95;/**/
-	/*mix-blend-mode: darken;*/
+    border-left: none, dotted 1em rgba(10, 10, 10, .5);
+    text-shadow: 0 .1em .1em rgba(0,0,0,0.11),
+                    0 .2em .2em rgba(0,0,0,0.11),
+                    0 .4em .4em rgba(0,0,0,0.11),
+                    0 .5em .8em rgba(0,0,0,0.11),
+                    0 .8em 1.6em rgba(0,0,0,0.11);
 	/* COLUMNS DEFINED BY THEIR WIDTH
 	column-width: 45em; */
 }
@@ -48,7 +52,7 @@ H1,H2,H3,H4,H5,H6 {
 	text-align: center;
 	margin: .5ex auto;
 	padding: 0;
-	mix-blend-mode: color-burn;
+	/*mix-blend-mode: color-burn;*/
 }
 
 H1 {
@@ -96,7 +100,6 @@ ol ol, ol ul, ul ol, ul ul {
 }
 
 a[href]:link {
-	color: darkgreen;
 	text-shadow: 0 0 .1em rgba(255,165,0,.5);
 }
 
